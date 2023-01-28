@@ -23,7 +23,7 @@ def evens(n):
     '''
     xs = range(n + 1)
     xs = filter(lambda x: x % 2 == 0, xs)
-    return xs
+    return list(xs)
 
 
 def threes(n):
@@ -44,7 +44,7 @@ def threes(n):
     '''
     xs = range(n + 1)
     xs = filter(lambda x: True if '3' in str(x) else False, xs)
-    return xs
+    return list(xs)
 
 
 def small_words(text):
@@ -66,7 +66,7 @@ def small_words(text):
     '''
     xs = text.split()
     xs = filter(lambda word: True if len(word) < 5 else False, xs)
-    return xs
+    return list(xs)
 
 
 def squares(n):
@@ -85,7 +85,7 @@ def squares(n):
     '''
     xs = range(1, n + 1)
     xs = map(lambda x: int(x ** 2), xs)
-    return xs
+    return list(xs)
 
 
 def lengths(strings):
@@ -101,4 +101,4 @@ def lengths(strings):
     [4, 2, 1, 4]
     '''
     strings = map(lambda x: len(x), strings)
-    return strings
+    return list(strings)
